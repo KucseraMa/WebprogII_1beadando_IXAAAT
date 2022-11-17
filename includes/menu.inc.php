@@ -5,7 +5,7 @@ Class Menu {
     public static function setMenu() {
         self::$menu = array();
         $connection = Database::getConnection();
-        $stmt = $connection->query("select url, nev, jogosultsag from menu where jogosultsag like '".$_SESSION['userlevel']."'");
+        $stmt = $connection->query("select url, nev, jogosultsag from menu where jogosultsag like '".$_SESSION['jogosultsag']."'");
         while($menuitem = $stmt->fetch(PDO::FETCH_ASSOC)) {
             self::$menu[$menuitem['url']] = array($menuitem['nev'], $menuitem['jogosultsag']);
         }

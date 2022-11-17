@@ -2,11 +2,11 @@
 
 
 session_start();
-if(! isset($_SESSION['userID'])) $_SESSION['userID'] = 0;
-if(! isset($_SESSION['firstName'])) $_SESSION['firstName'] = "";
-if(! isset($_SESSION['lastName'])) $_SESSION['lastName'] = "";
-if(! isset($_SESSION['userName'])) $_SESSION['userName'] = "";
-if(! isset($_SESSION['userlevel'])) $_SESSION['userlevel'] = "1__";
+if(! isset($_SESSION['felhasznaloId'])) $_SESSION['felhasznaloId'] = 0;
+if(! isset($_SESSION['vezetekNev'])) $_SESSION['vezetekNev'] = "";
+if(! isset($_SESSION['utoNev'])) $_SESSION['utoNev'] = "";
+if(! isset($_SESSION['felhasznalo'])) $_SESSION['felhasznalo'] = "";
+if(! isset($_SESSION['jogosultsag'])) $_SESSION['jogosultsag'] = "1__";
 
 include(SERVER_ROOT . 'includes/database.inc.php');
 include(SERVER_ROOT . 'includes/menu.inc.php');
